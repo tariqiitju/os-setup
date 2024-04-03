@@ -1,8 +1,15 @@
 #!/bin/bash
 
-# Update and Install Zsh
-sudo apt-get update
-sudo apt-get install -y zsh curl git wget
+# Define a variable CMD_PREFIX that is set to "sudo" if the user is not root
+if [ "$(id -u)" != "0" ]; then
+    CMD_PREFIX="sudo"
+else
+    CMD_PREFIX=""
+fi
+
+# Update and Install Zsh, curl, git, wget, zip
+${CMD_PREFIX} apt-get update
+${CMD_PREFIX} apt-get install -y zsh curl git wget zip
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
