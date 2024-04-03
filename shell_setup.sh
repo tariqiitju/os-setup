@@ -28,7 +28,6 @@ mkdir -p ~/.local/bin
 curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
 
 # Add Oh My Posh init command to .zshrc
-echo 'eval "$($HOME/oh-my-posh init zsh --config $HOME/.poshthemes.omp.json)"' >> ~/.zshrc
 echo 'eval "$($HOME/.local/bin/oh-my-posh init zsh --config $HOME/themes/jonnychipz.omp.json)"' >> ~/.zshrc
 
 
@@ -36,3 +35,7 @@ echo 'eval "$($HOME/.local/bin/oh-my-posh init zsh --config $HOME/themes/jonnych
 chsh -s $(which zsh)
 
 echo "Installation complete. Please log out and log back in for the default shell change to take effect."
+
+
+# curl -sSL https://raw.githubusercontent.com/tariqiitju/os-setup/main/shell_setup.sh | bash
+# wget -qO- https://raw.githubusercontent.com/tariqiitju/os-setup/main/shell_setup.sh | bash
